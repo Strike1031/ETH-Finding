@@ -1,0 +1,19 @@
+================Possibility  2 * 16 ^ -30 %==========================
+Public key has 40 digit
+Private key has 64 digit
+Metamask users: 21 million
+Users that have 0.1 eth at least in metamask: 3.9 million
+
+[[[[Calculate----------]]]]
+
+Users that have 0.1 ETH at least: 3.9 million = 3 900 000 = 3.7 *16 ^ 5 
+Get One Public Key address with private key : 2 second
+
+2 Days: Get 3600*24 ==  2 second * (16*16*16*16 address) [so 4 digits]
+it means that it takes 2*16=32 days to get 5 all digits in public key  
+
+Total days with public 40 digits: 2* 16 ^ 36 days
+
+So days to get 0.1 ETH:  0.5 * 16 ^ 31 days
+So possibility to get 0.1 ETH in 1 day:  2 * 16 ^ -30
+

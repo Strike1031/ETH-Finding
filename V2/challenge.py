@@ -17,10 +17,10 @@ intoFile = bool(os.environ.get('OUTPUT_TO_FILE'))
 
 
 amountToGen=int(os.environ.get("AMOUNT_TO_GENERATE"))
-
-
-#Start private address  example:0x2f3493044924290290290902492... (64byte)
-basic_startPrivateKey = 0xefd1054b382a415fa4e52efd9d416e7f9382c9d89f9933f46457a1a225852538
+basic_startPrivateKey=hex(int(os.environ.get("START_PRIVATE_KEY"),0))
+basic_startPrivateKey = int(basic_startPrivateKey, 0)
+#Start private address  example:0x3f3493044924290290290902492... (64byte)
+#basic_startPrivateKey = 0xbfd1054b382a415fa4e52efd9d21657f9382c9d89f9933f46457a1a225852535
 
 # Define global (non .env) variables
 pbar = ProgressBar()
@@ -62,7 +62,7 @@ def finding(amount=amountToGen, startPrivateKey = basic_startPrivateKey, unique_
             for i in range(amount):
                 # privateKey = generatePrivateKey()
                 time.sleep(random.uniform(0, 1.0)) #after random seconds between a range
-                print("i: ", i)
+                print(i)
                 privateKey = startPrivateKey + i
                 privateKey = hex(privateKey)[2:]
                 privateKey = privateKey.zfill(32 * 2)
@@ -77,6 +77,7 @@ def finding(amount=amountToGen, startPrivateKey = basic_startPrivateKey, unique_
                 # If you want to check individual balances as you generate them, use the following block of code
                 try:
                     balance = eth.get_eth_balance(walletAddress)
+                    #print(balance)
                     if balance != '0':
                         print("Ether detected!", i)
                         print("Wallet: ", walletAddress)
