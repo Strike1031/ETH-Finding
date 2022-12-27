@@ -1,5 +1,5 @@
 @Echo off
-title ETHChecker Atomic 
+title ETH_FAST_Checker Atomic 
 Pushd "%~dp0"
 :loop
 python FindETH.py
