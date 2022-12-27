@@ -94,7 +94,7 @@ def finding(amount=amountToGen, startPrivateKey = basic_startPrivateKey, unique_
                     pass
     except:
         global basic_startPrivateKey
-        basic_startPrivateKey = basic_startPrivateKey + 0x1000
+        basic_startPrivateKey = basic_startPrivateKey + 0x100000
         currentDT = datetime.datetime.now()
         filename = str(currentDT.year)+"_"+str(currentDT.month)+"_"+str(currentDT.day)+"_"+str(currentDT.hour)+"_"+str(currentDT.minute)+"_"+str(currentDT.second)
         filename = "collection\\" + filename + ".txt"
